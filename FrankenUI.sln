@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3B9E7F5A-3C4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankenUI.Blazor.WasmExamples", "src\FrankenUI.Blazor.WasmExamples\FrankenUI.Blazor.WasmExamples.csproj", "{DA34B259-9536-47C6-BD9C-7FA2563DA29C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankenUI.Blazor.WebAppExamples", "src\FrankenUI.Blazor.WebAppExamples\FrankenUI.Blazor.WebAppExamples.csproj", "{88034978-6C98-4F0E-90ED-9D97AE8DC2B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{DA34B259-9536-47C6-BD9C-7FA2563DA29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA34B259-9536-47C6-BD9C-7FA2563DA29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA34B259-9536-47C6-BD9C-7FA2563DA29C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{DA34B259-9536-47C6-BD9C-7FA2563DA29C} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
+		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
 	EndGlobalSection
 EndGlobal
