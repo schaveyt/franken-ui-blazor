@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankenUI.Blazor.WebAppExam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankenUI.Blazor.Components", "src\FrankenUI.Blazor.CustomComponents\FrankenUI.Blazor.CustomComponents.csproj", "{EE45178C-3F33-4DFC-8733-8652C0290BB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrankenUI.Blazor.ExampleComponents", "src\FrankenUI.Blazor.ExampleComponents\FrankenUI.Blazor.ExampleComponents.csproj", "{D774A363-310F-4C59-94DA-511CF7F8E052}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{EE45178C-3F33-4DFC-8733-8652C0290BB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE45178C-3F33-4DFC-8733-8652C0290BB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE45178C-3F33-4DFC-8733-8652C0290BB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D774A363-310F-4C59-94DA-511CF7F8E052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D774A363-310F-4C59-94DA-511CF7F8E052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D774A363-310F-4C59-94DA-511CF7F8E052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D774A363-310F-4C59-94DA-511CF7F8E052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,5 +43,6 @@ Global
 		{DA34B259-9536-47C6-BD9C-7FA2563DA29C} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
 		{88034978-6C98-4F0E-90ED-9D97AE8DC2B4} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
 		{EE45178C-3F33-4DFC-8733-8652C0290BB1} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
+		{D774A363-310F-4C59-94DA-511CF7F8E052} = {3B9E7F5A-3C44-41A5-958C-035BA2269AF9}
 	EndGlobalSection
 EndGlobal
