@@ -1,4 +1,5 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
 <div class="grid gap-6 p-8 lg:grid-cols-2 xl:grid-cols-3">
     <div class="space-y-6">
@@ -29,6 +30,14 @@
                             </path>
                         </svg>
                         Google
+                    </button>
+                    <button class="uk-button uk-button-default" @onclick="IncrementCounter">
+                        <svg role="img" viewBox="0 0 24 24" class="mr-2 h-4 w-4">
+                            <path fill="currentColor"
+                                d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z">
+                            </path>
+                        </svg>
+                        Blazor <span class="ml-3">@counter</span>
                     </button>
                 </div>
 
@@ -302,12 +311,19 @@
                                     <p class="text-sm text-muted-foreground">@a.Email</p>
                                 </div>
                                 <div class="h-9 w-[200px]">
-                                    <uk-select uk-cloak>
-                                        @foreach (var b in new[] { "Read and write access", "Read-only access" })
+
+                                    @{
+                                        var selectOptions = new List<FrankenUISelect.SelectOption>();
+                                        foreach (var b in new[] { "Read and write access", "Read-only access" })
                                         {
-                                            <option value=@b selected=@(b == a.Role)>@b</option>
+                                            selectOptions.Add(new FrankenUISelect.SelectOption { Value=b, Text=b, Selected=(b == a.Role) });
                                         }
-                                    </uk-select>
+                                    }
+                                    <FrankenUISelect Name="accessSelect"
+                                        Multiple="true"
+                                        Searchable="true"
+                                        Options="selectOptions" />
+
                                 </div>
                             </div>
                         }
@@ -408,37 +424,28 @@
                     <div class="space-y-2">
                         <label class="uk-form-label"> Area </label>
                         <div class="h-9">
-                            <uk-select uk-cloak>
-                                @{
-                                    List<string> areaOptions = ["Team", "Billing", "Account", "Deployment", "Support"];
-                            
-                                    foreach (var a in areaOptions)
-                                    {
-                                        <option selected=@(a == "Billing" )>@a</option>
-                                    }
+                            @{
+                                var selectAreaOptions = new List<FrankenUISelect.SelectOption>();
+                                foreach (var b in new[] {"Team", "Billing", "Account", "Deployment", "Support"})
+                                {
+                                    selectAreaOptions.Add(new FrankenUISelect.SelectOption { Value=b, Text=b, Selected=(b == "Billing") });
                                 }
-                            </uk-select>
+                            }
+                            <FrankenUISelect Name="areaSelect" Options="selectAreaOptions" />
                         </div>
                     </div>
 
                     <div class="space-y-2">
                         <label class="uk-form-label"> Severity </label>
                         <div class="h-9">
-                            <uk-select uk-cloak>
                             @{
-                                List<string> severityOptions = [
-                                    "Severity 1 (Highest)",
-                                    "Severity 2",
-                                    "Severity 3",
-                                    "Severity 4 (Lowest)",
-                                ];
-                        
-                                foreach (var a in severityOptions)
+                                var selectSeverityOptions = new List<FrankenUISelect.SelectOption>();
+                                foreach (var b in new[] {"Severity 1 (Highest)", "Severity 2", "Severity 3", "Severity 4 (Lowest)",})
                                 {
-                                    <option selected=@(a == "Severity 2")>@a</option>
+                                    selectSeverityOptions.Add(new FrankenUISelect.SelectOption { Value=b, Text=b, Selected=(b == "Billing") });
                                 }
                             }
-                            </uk-select>
+                            <FrankenUISelect Name="severitySelect" Options="selectSeverityOptions"/>
                         </div>
                     </div>
                 </div>
@@ -593,7 +600,7 @@
                                 </span>
                             </label>
                             <input checked=@(a.Id == "strict") class="uk-toggle-switch uk-toggle-switch-primary flex-none"
-                                id={a.id} type="checkbox" />
+                                id=@a.Id type="checkbox" />
                         </div>
                     }
                 }
@@ -629,3 +636,16 @@
         style="position: absolute !important; top: 0px !important; left: 0px !important; height: 0px !important; width: 0px !important;">
     </div>
 </div>
+
+@code
+{
+    private string? selectedArea;
+    private string? selectedSeverity;
+
+    private int counter = 0;
+
+    private void IncrementCounter()
+    {
+        counter += 1;
+    }
+}

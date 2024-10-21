@@ -8,9 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BlazorJSComponents" Version="0.1.0-preview.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.0-rc.2.24474.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0-rc.2.24474.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrankenUI.Blazor.CustomComponents\FrankenUI.Blazor.CustomComponents.csproj" />
   </ItemGroup>
 
 </Project>

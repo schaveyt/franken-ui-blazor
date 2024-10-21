@@ -9356,6 +9356,10 @@ th.uk-text-break, td.uk-text-break {
   margin-left: 0.5rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -9386,6 +9390,10 @@ th.uk-text-break, td.uk-text-break {
 
 .grid {
   display: grid;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-square {
@@ -9595,12 +9603,12 @@ th.uk-text-break, td.uk-text-break {
   border-color: hsl(var(--primary));
 }
 
-.bg-background {
-  background-color: hsl(var(--background));
-}
-
 .bg-accent {
   background-color: hsl(var(--accent));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
 }
 
 .bg-border {
