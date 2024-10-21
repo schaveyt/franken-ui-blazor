@@ -303,12 +303,10 @@
                                 </div>
                                 <div class="h-9 w-[200px]">
                                     <uk-select uk-cloak>
-                                        <option >Read and write access</option>
-                                        <option >Read-only access</option>
-                                        @* @foreach (var b in new[] { "Read and write access", "Read-only access" })
+                                        @foreach (var b in new[] { "Read and write access", "Read-only access" })
                                         {
                                             <option value=@b selected=@(b == a.Role)>@b</option>
-                                        } *@
+                                        }
                                     </uk-select>
                                 </div>
                             </div>
